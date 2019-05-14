@@ -1,0 +1,51 @@
+{
+  "name": "@lvchengbin/base-convert",
+  "version": "0.0.0",
+  "description": "Convert string in any base.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --forceExit",
+    "tw": "npm run test-watch",
+    "test-watch": "jest --watch",
+    "lint": "eslint lib --cache --ignore-path .eslintignore",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LvChengbin/base-convert.git"
+  },
+  "keywords": [
+    "base",
+    "convert",
+    "base36",
+    "base62"
+  ],
+  "author": "LvChengbin <lvchengbin59@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LvChengbin/base-convert/issues"
+  },
+  "homepage": "https://github.com/LvChengbin/base-convert#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0",
+    "pre-commit": "^1.2.2"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.spec.js"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "text",
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "bignumber.js": "^8.1.1"
+  }
+}
