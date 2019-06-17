@@ -27,7 +27,7 @@ import convert from '@lvchengbin/base-convert';
 convert( '8492340923842348230482304823', 10, 62 ) ); // b2LE4AbMjns5UHxZ
 ```
 
-In web browsers, you can use [base-convert.js](), and [base-convert.bc.js]() for browsers doesn't support ES6 syntax.
+In web browsers, you can use [base-convert.js](https://raw.githubusercontent.com/LvChengbin/base-convert/master/dist/base-convert.js), and [base-convert.bc.js](https://raw.githubusercontent.com/LvChengbin/base-convert/master/dist/base-convert.bc.js) for browsers doesn't support ES6 syntax.
 
 ## API
 
