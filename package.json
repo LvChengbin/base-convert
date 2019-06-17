@@ -1,9 +1,9 @@
 {
   "name": "@lvchengbin/base-convert",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Convert string in any base.",
   "main" : "dist/base-convert.cjs.js",
-  "jsnext": "src/index.js",
+  "jsnext:main": "src/index.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
