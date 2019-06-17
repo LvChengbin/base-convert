@@ -20,6 +20,15 @@ convert( 'b2LE4AbMjns5UHxZ', 62, 10 ) ); // 8492340923842348230482304823
 convert.bin2hex( '1010' ); // equal to convert( '1010', 2, 16 )
 ```
 
+Using as ES6 module.
+
+```js
+import convert from '@lvchengbin/base-convert';
+convert( '8492340923842348230482304823', 10, 62 ) ); // b2LE4AbMjns5UHxZ
+```
+
+In web browsers, you can use [base-convert.js](), and [base-convert.bc.js]() for browsers doesn't support ES6 syntax.
+
 ## API
 
 **Caveat** the frist argument will be convert to string before converting to other base, this will cause that a number, such as 11001101, will be treated as a `binary` instead of a `decimalism` if the `fromBase` is set to `2`. To set the `fromBase` to `10` if you want to use 11001101 as a decimalism.

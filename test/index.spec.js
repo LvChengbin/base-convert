@@ -1,4 +1,4 @@
-const convert = require( '../src' );
+import convert from '../src';
 
 describe( 'base-convert', () => {
 

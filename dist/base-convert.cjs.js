@@ -1,3 +1,5 @@
+'use strict';
+
 /******************************************************************
  * Copyright (C) 2019 LvChengbin
  * 
@@ -9,7 +11,7 @@
 
 function convert( str, from, to, characters ) {
     if( !characters ) {
-        characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-+='
+        characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-+=';
     }
     if( from > characters.length || to > characters.length ) {
         throw new TypeError( 'Cannot convert the string to the target base, because the candidate characters is not enough.' );
@@ -29,7 +31,7 @@ function convert( str, from, to, characters ) {
         for( let i = 0; i < l; i += 1 ) {
             value = value * from + nibbles[ i ];
             if( value >= to ) {
-                nibbles[ newlen++ ] = ~~( value / to )
+                nibbles[ newlen++ ] = ~~( value / to );
                 value %= to;
             } else if( newlen > 0 ) {
                 nibbles[ newlen++ ] = 0;
@@ -49,4 +51,4 @@ convert.hex2bin = n => convert( n, 16, 2 );
 convert.dec2hex = n => convert( n, 10, 16 );
 convert.hex2dec = n => convert( n, 16, 10 );
 
-export default convert;
+module.exports = convert;

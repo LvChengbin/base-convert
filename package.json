@@ -1,12 +1,14 @@
 {
   "name": "@lvchengbin/base-convert",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Convert string in any base.",
-  "main": "src/index.js",
+  "main" : "dist/base-convert.cjs.js",
+  "jsnext": "src/index.js",
   "scripts": {
-    "test": "jest --forceExit",
-    "tw": "npm run test-watch",
-    "test-watch": "jest --watch",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "test": "karma start",
+    "prepublish": "npm run build",
     "lint": "eslint lib --cache --ignore-path .eslintignore",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
@@ -28,22 +30,18 @@
   "homepage": "https://github.com/LvChengbin/base-convert#readme",
   "devDependencies": {
     "eslint": "^5.16.0",
+    "jasmine-core": "^3.4.0",
     "jest": "^24.8.0",
-    "pre-commit": "^1.2.2"
-  },
-  "jest": {
-    "testMatch": [
-      "**/test/**/*.spec.js"
-    ],
-    "coverageReporters": [
-      "text-summary",
-      "text",
-      "lcov"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ],
-    "testEnvironment": "node"
+    "karma": "^4.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-rollup-preprocessor": "^7.0.0",
+    "optimist": "^0.6.1",
+    "pre-commit": "^1.2.2",
+    "puppeteer": "^1.17.0",
+    "rollup": "^1.15.6",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-node-resolve": "^5.0.3"
   },
   "dependencies": {}
 }
